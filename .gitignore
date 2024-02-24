@@ -39,3 +39,5 @@
 # ignore vendor/bundle
 /vendor/bundle
 /vender/bundle
+
+.DS_Store
