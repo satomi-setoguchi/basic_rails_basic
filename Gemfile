@@ -74,3 +74,5 @@ group :test do
 end
 
 gem 'sorcery', "0.16.3"
+
+gem 'rails-i18n', '~> 7.0.0'

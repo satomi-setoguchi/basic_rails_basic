@@ -43,3 +43,8 @@ module V3BasicRailsBasic
     config.generators.system_tests = nil
   end
 end
+module I18nApp
+  class Application < Rails::Application
+    config.i18n.default_locale = :ja 
+  end
+end
