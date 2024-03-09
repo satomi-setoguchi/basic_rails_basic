@@ -36,7 +36,7 @@ gem "bootsnap", require: false
 gem "jsbundling-rails"
 
 # Use Sass to process CSS
-# gem "sassc-rails"
+
 gem "dartsass-rails", "~> 0.4.0"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
@@ -61,7 +61,7 @@ group :development do
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
-
+  gem 'pry-byebug'
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
@@ -76,3 +76,6 @@ end
 gem 'sorcery', "0.16.3"
 
 gem 'rails-i18n', '~> 7.0.0'
+
+gem 'bootstrap', '~> 5.3.2'
+gem 'sass-rails'
