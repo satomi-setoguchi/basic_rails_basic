@@ -79,3 +79,5 @@ gem 'rails-i18n', '~> 7.0.0'
 
 gem 'bootstrap', '~> 5.3.2'
 gem 'sass-rails'
+
+gem 'draper', '4.0.2'
