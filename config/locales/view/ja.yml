@@ -10,6 +10,8 @@ ja:
     label:
       email: メールアドレス
       password: パスワード
+      title: タイトル
+      body: 本文
   user_sessions:
     new:
       title: ログイン
@@ -28,7 +30,10 @@ ja:
     create:
       success: ユーザー登録が完了しました
       failure: ユーザー登録に失敗しました
-
+  boards:
+    create:
+      success: 掲示板を作成しました
+      failure: 掲示板を作成出来ませんでした
   header:
     login: ログイン
     logout: ログアウト
