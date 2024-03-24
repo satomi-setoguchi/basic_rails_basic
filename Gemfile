@@ -61,7 +61,6 @@ group :development do
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
-  gem 'pry-byebug'
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
@@ -81,3 +80,5 @@ gem 'bootstrap', '~> 5.3.2'
 gem 'sass-rails'
 
 gem 'draper', '4.0.2'
+
+gem 'carrierwave', '2.2.2'
