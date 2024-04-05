@@ -1,15 +1,11 @@
 <div class="col-sm-12 col-lg-4 mb-3">
   <div id="board-id-<%= board.id %>">
     <div class="card">
-      <% if board.board_image? %>
-        <%= image_tag board.board_image.url, class: "card-img-top", width: "300", height:"200" %>
-      <% else %>
-        <%= image_tag "board_placeholder.png", class: "card-img-top", width: "300", height:"200" %>
-      <% end %>
+      <%= image_tag board.board_image_url, class: "card-img-top", width: "300", height:"200" %>
       <div class="card-body">
         <div class="d-flex">
           <h4 class="card-title">
-            <%= link_to board.title, '#' %>
+            <%= link_to board.title, board_path(board) %>
           </h4>
           <div class='ms-auto'>
             <%= link_to '#', id: 'button-edit-#{board.id}' do %>

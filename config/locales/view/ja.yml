@@ -1,5 +1,6 @@
 ja:
   defaults:
+    post: 投稿
     flash_message:
       require_login: ログインしてください
   helpers:
@@ -11,7 +12,7 @@ ja:
       email: メールアドレス
       password: パスワード
       title: タイトル
-      body: 本文
+      body: コメント
   user_sessions:
     new:
       title: ログイン
@@ -31,9 +32,17 @@ ja:
       success: ユーザー登録が完了しました
       failure: ユーザー登録に失敗しました
   boards:
+    new:
+      title: タイトル
+    show:
+      title: 掲示板詳細
     create:
       success: 掲示板を作成しました
       failure: 掲示板を作成出来ませんでした
+  comment:
+    create:
+      success: コメントを作成しました
+      failure: コメントを作成出来ませんでした
   header:
     login: ログイン
     logout: ログアウト

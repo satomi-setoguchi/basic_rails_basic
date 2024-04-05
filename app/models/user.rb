@@ -8,4 +8,9 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
 
   has_many :boards, dependent: :destroy
+  has_many :comments, dependent: :destroy
+
+  def my_comment?(comment)
+    comment.user_id == id
+  end
 end
