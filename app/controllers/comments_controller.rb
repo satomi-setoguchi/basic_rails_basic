@@ -11,7 +11,7 @@ class CommentsController < ApplicationController
       redirect_to board_path(comment.board), danger: t('comment.create.failure')
     end
   end
-xxx
+
   private
 
   def comment_params
