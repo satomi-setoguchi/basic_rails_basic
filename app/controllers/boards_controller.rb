@@ -9,7 +9,7 @@ class BoardsController < ApplicationController
 
   def create
     @board = current_user.boards.build(board_params)
-      if @board.save
+    if @board.save
       redirect_to boards_path, success: t('boards.create.success')
     else
       flash.now[:danger] = t('boards.create.failure')
