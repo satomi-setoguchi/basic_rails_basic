@@ -76,9 +76,6 @@ gem 'sorcery', "0.16.3"
 
 gem 'rails-i18n', '~> 7.0.0'
 
-gem 'bootstrap', '~> 5.3.2'
-gem 'sass-rails'
-
 gem 'draper', '4.0.2'
 
 gem 'carrierwave', '2.2.2'
