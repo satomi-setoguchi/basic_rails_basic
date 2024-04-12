@@ -52,6 +52,6 @@ class BoardsController < ApplicationController
   end
 
   def set_board
-    @board =current_user.boards.find(params[:id])
+    @board = current_user.boards.find(params[:id])
   end
 end
