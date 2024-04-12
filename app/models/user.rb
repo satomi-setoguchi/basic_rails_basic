@@ -13,4 +13,8 @@ class User < ApplicationRecord
   def my_comment?(comment)
     comment.user_id == id
   end
+
+  def my_board?(board)
+    board.user_id == id
+  end
 end

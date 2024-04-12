@@ -2,9 +2,9 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-8 offset-lg-2">
-      <h1><%= t('boards.new.title') %></h1>
+      <h1><%= t('boards.edit.title') %></h1>
 
-        <%= form_with model: @board, class: "new_board" do |form| %>
+        <%= form_with model: @board, class: "edit_board" do |form| %>
           <%= render 'shared/error_message', object: form.object  %>
           <div class="mb-3">
             <%= form.label :title %>
@@ -19,7 +19,7 @@
             <%= form.file_field :board_image, class: "form-control", accept: 'image/*' %>
             <%= form.hidden_field :board_image_cache %>
           </div>
-          <%= form.submit "登録",  class: "btn btn-primary" %>
+          <%= form.submit t('helpers.submit.update'),  class: "btn btn-primary" %>
         <% end %>
       </form>
     </div>
