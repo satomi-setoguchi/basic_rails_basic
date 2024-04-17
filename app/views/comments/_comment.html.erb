@@ -7,7 +7,7 @@
               <p><%= simple_format(comment.body) %></p>
             </td>
 
-            <% if current_user.my_comment?(comment) %>
+            <% if current_user.own?(comment) %>
 
               <td class="action">
                 <ul class="list-inline justify-content-center" style="float: right;">

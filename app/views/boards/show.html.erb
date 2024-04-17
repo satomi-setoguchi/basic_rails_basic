@@ -22,7 +22,7 @@
                 <i class='bi bi-pencil-fill'></i>
               <% end %>
               </a>
-              <%= link_to board_path(@board), id:"button-delete-#{@board.id}", data: { turbo_method: :delete, turbo_confirm: t('boards.destroy.confirm') }  do %>
+              <%= link_to board_path(@board), id:"button-delete-#{@board.id}", data: { turbo_method: :delete, turbo_confirm: t('defaults.delete_confirm') }  do %>
                 <i class="bi bi-trash-fill"></i>
               <% end %>
               <% end %>

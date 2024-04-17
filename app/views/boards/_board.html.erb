@@ -7,21 +7,28 @@
           <h4 class="card-title">
             <%= link_to board.title, board_path(board) %>
           </h4>
-          <% if current_user.my_board?(board) %>
+          <% if current_user.own?(board) %>
             <div class='ms-auto'>
               <%= link_to edit_board_path(board), id: "button-edit-#{board.id}" do %>
                 <i class="bi bi-pencil-fill"></i>
               <% end %>
-              <%= link_to board_path(board), id: "button-delete-#{board.id}", data: { turbo_method: :delete, turbo_confirm: t('boards.destroy.confirm') }  do %>
+              <%= link_to board_path(board), id: "button-delete-#{board.id}", data: { turbo_method: :delete, turbo_confirm: t('defaults.delete_confirm') }  do %>
                 <i class="bi bi-trash-fill"></i>
               <% end %>
             </div>
           <% end %>
         </div>
-        <ul class="list-inline">
-          <li><i class="bi bi-person"></i><%= board.user.decorate.full_name %></li>
-          <li><i class="bi bi-calendar"></i><%= l board.created_at, format: :short %></li>
-        </ul>
+          <ul class="list-inline">
+            <li>
+              <div class="d-flex">
+                <i class="bi bi-person"></i><%= board.user.decorate.full_name %>
+                <div class="ms-auto">
+                  <%= render 'bookmarks/bookmark_button' %>
+                </div>
+              </div>
+            </li>
+            <li><i class="bi bi-calendar"></i><%= l board.created_at, format: :short %></li>
+          </ul>
         <p class="card-text"><%= board.body %></p>
       </div>
     </div>
