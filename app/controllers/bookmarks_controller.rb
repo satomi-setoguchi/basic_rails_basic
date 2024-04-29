@@ -10,5 +10,4 @@ class BookmarksController < ApplicationController
     current_user.unbookmark(board)
     redirect_to boards_path, status: :see_other, success: t('defaults.flash_message.unbookmark')
   end
-
 end
