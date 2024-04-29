@@ -39,13 +39,14 @@ class BoardsController < ApplicationController
     end
   end
 
+  def bookmarks
+    @bookmark_boards = current_user.bookmark_boards.includes(:user).order(created_at: :desc)
+  end
+
   def destroy
     board = current_user.boards.find(params[:id])
     board.destroy!
     redirect_to boards_path, status: :see_other, success: t('defaults.flash_message.deleted', item: Board.model_name.human)
-  end
-
-  def bookmarks
   end
 
   private

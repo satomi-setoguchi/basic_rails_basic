@@ -22,10 +22,12 @@
             <li>
               <div class="d-flex">
                 <i class="bi bi-person"></i><%= board.user.decorate.full_name %>
-                <div class="ms-auto">
-                  <%= render 'bookmarks/bookmark_button' %>
+                  <% unless current_user.own?(board) %>
+                    <div class="ms-auto">
+                      <%= render 'bookmark_button', { board: board } %>
+                    </div>
+                  <% end %>
                 </div>
-              </div>
             </li>
             <li><i class="bi bi-calendar"></i><%= l board.created_at, format: :short %></li>
           </ul>
