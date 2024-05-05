@@ -4,12 +4,26 @@ class CommentsController < ApplicationController
   end
 
   def create
-    comment = current_user.comments.build(comment_params)
-    if comment.save
-      redirect_to board_path(comment.board), success: t('comment.create.success')
+    @comment = current_user.comments.build(comment_params)
+    @comment.save
+  end
+
+  def edit
+    comment = Comments.find(params[:id])
+  end
+
+  def update
+    comment = current_user.comments.find(params[:id])
+    if comment.update(comment_params)
+      redirect_to board_path(comment), success: t('comment.create.success')
     else
-      redirect_to board_path(comment.board), danger: t('comment.create.failure')
+      redirect_to board_path(comment), danger: t('comment.create.failure')
     end
+  end
+
+  def destroy
+    @comment = current_user.comments.find(params[:id])
+    @comment.destroy!
   end
 
   private

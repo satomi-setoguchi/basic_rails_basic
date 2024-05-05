@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resources :users, only: %i[new create]
   resources :boards do
-    resources :comments, only: %i[create edit destroy], shallow: true
+    resources :comments, shallow: true
     collection do
       get :bookmarks
     end

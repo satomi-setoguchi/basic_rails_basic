@@ -1,6 +1,7 @@
 <div class="row mb-3" id="comment-form">
   <div class="col-lg-8 offset-lg-2">
     <%= form_with model: [board, comment] do |form| %>
+      <% render "shared/error_message", object: form.object %>
       <%= form.label :body %>
       <%= form.text_area :body, class: "form-control mb-3", row: "4", placeholder: "コメント" %>
       <%= form.submit t('defaults.post'), class: "btn btn-primary" %>
