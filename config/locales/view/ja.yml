@@ -2,6 +2,8 @@ ja:
   defaults:
     create: 作成
     post: 投稿
+    edit: 編集
+    search_word: 検索ワード
     delete_confirm: 削除しますか
     flash_message:
       created: "%{item}を作成しました"
@@ -22,6 +24,7 @@ ja:
       password: パスワード
       title: タイトル
       body: コメント
+      avatar: アバター
   user_sessions:
     new:
       title: ログイン
@@ -40,6 +43,8 @@ ja:
     create:
       success: ユーザー登録が完了しました
       failure: ユーザー登録に失敗しました
+    edit:
+      title: プロフィール編集
   boards:
     new:
       title: 掲示板作成
@@ -59,6 +64,14 @@ ja:
     create:
       success: コメントを作成しました
       failure: コメントを作成出来ませんでした
+  profiles:
+    show:
+      title: プロフィール
+      email: メールアドレス
+      name: 氏名
+      avatar: アバター
+    edit:
+      title: プロフィール編集
   header:
     login: ログイン
     logout: ログアウト

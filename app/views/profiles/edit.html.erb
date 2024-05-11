@@ -4,7 +4,7 @@
     <div class="col-md-10 col-lg-8 mx-auto">
       <h1><%= t('.title') %></h1>
 
-      <%= form_with model: @user do |f| %>
+      <%= form_with model: @user, url: profile_path do |f| %>
         <%= render 'shared/error_message', object: f.object  %>
           <div class = 'form_group'>
             <%= f.label :last_name %>
@@ -19,21 +19,14 @@
             <%= f.email_field :email, class: 'form-control' %>
           </div>
           <div class='form-group'>
-            <%= f.label :password %>
-            <%= f.password_field :password, class: 'form-control' %>
-          </div>
-          <div class='form-group'>
-            <%= f.label :password_confirmation %>
-            <%= f.password_field :password_confirmation, class: 'form-control' %>
-          </div>
-          <div class='form-group'>
             <%= f.label :avatar %>
-            <%= f.file_field :avatar, id: 'avatar', class: "form-control" %>
+            <%= f.file_field :avatar, class: "form-control", accept: 'image/*' %>
             <%= f.hidden_field :avatar_cache %>
           </div>
+          <%= image_tag current_user.avatar_url, class: 'rounded-circle mr15', width: '100', height: '100' %>
+          <p>
         <%= f.submit nil, class: 'btn btn-primary' %>
       <% end %>
-
       <div class='text-center'>
         <%= link_to t('.to_login_page'), login_path %>
       </div>
