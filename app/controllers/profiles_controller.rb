@@ -1,7 +1,5 @@
 class ProfilesController < ApplicationController
-  def show
-
-  end
+  def show; end
 
   def edit
     @user = User.find(current_user.id)
@@ -16,7 +14,7 @@ class ProfilesController < ApplicationController
       render :edit, status: :unprocessable_entity
     end
   end
-  
+
   private
 
   def user_params
