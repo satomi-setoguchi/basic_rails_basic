@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resources :users, only: %i[new create]
   resources :boards do
@@ -8,6 +9,7 @@ Rails.application.routes.draw do
     end
   end
   resources :bookmarks, only: %i[create destroy]
+  resources :password_resets, only: %i[new create edit update]
   resource :profile, only: %i[show edit update]
 
   get 'login', to: 'user_sessions#new'

@@ -5,6 +5,7 @@ ja:
     edit: 編集
     search_word: 検索ワード
     delete_confirm: 削除しますか
+    password_reset: パスワードリセット
     flash_message:
       created: "%{item}を作成しました"
       not_created: "%{item}を作成出来ませんでした"
@@ -14,11 +15,13 @@ ja:
       require_login: ログインしてください
       bookmark: ブックマークしました
       unbookmark: ブックマークを外しました
+      sent_reset_password_email: パスワードリセット手順を送信しました
   helpers:
     submit:
       create: 登録
       submit: 保存
       update: 更新
+      send: 送信
     label:
       email: メールアドレス
       password: パスワード
@@ -72,6 +75,11 @@ ja:
       avatar: アバター
     edit:
       title: プロフィール編集
+  password_resets:
+    new:
+      title: パスワードリセット申請
+    edit:
+      title: パスワードリセット
   header:
     login: ログイン
     logout: ログアウト
