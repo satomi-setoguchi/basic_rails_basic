@@ -23,7 +23,7 @@ class PasswordResetsController < ApplicationController
       not_authenticated
       return
     end
-  
+
     @user.password_confirmation = params[:user][:password_confirmation]
     if @user.change_password(params[:user][:password])
       redirect_to login_path, success: 'パスワードを変更しました'
