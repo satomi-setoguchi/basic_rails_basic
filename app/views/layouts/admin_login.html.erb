@@ -1,0 +1,14 @@
+<!doctype html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= page_title(yield(:title), admin: true) %></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'admin/login' %>
+    <%= javascript_include_tag "admin", "data-turbo-track": "reload", defer: true %>
+  </head>
+  <body class="text-center">
+    <%= yield %>
+  </body>
+</html>

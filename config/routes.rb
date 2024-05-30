@@ -18,4 +18,12 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   root "static_pages#top"
+    
+  namespace :admin do
+    root to: 'dashboards#index'
+    resource :dashboard, only: %i[index]
+    get 'login', to: 'user_sessions#new', :as => :login
+    post 'login', to: 'user_sessions#create'
+    delete 'logout', to: 'user_sessions#destroy', :as => :logout
+  end
 end

@@ -1,0 +1,26 @@
+<%= content_for(:title, t('.title')) %>
+<main class="form-signin w-100 m-auto">
+<%= render 'shared/flash_message' %>
+  <%= form_with url: admin_login_path, data: { turbo: false } do |form| %>
+    <h1 class="h3 mb-3 fw-normal"><% t('.title') %></h1>
+
+    <div class="form-floating">
+      <%= form.email_field :email, class: "form-control", placeholder: "name@example.com"%>
+      <%= form.label :email %>
+      </div>
+    <div class="form-floating">
+      <%= form.password_field :password, class: "form-control", placeholder: "Password" %>
+      <%= form.label :password %>
+    </div>
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>
+    <%= form.submit "ログイン", class: "w-100 btn btn-lg btn-primary" %>
+  <% end %>
+  </div>
+
+ 
+  <p class="mt-5 mb-3 text-muted">&copy; 2017–2022</p>
+</main>

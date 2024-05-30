@@ -30,4 +30,6 @@ class User < ApplicationRecord
   def bookmark?(board)
     bookmark_boards.include?(board)
   end
+
+  enum role: {general: false, admin: true}
 end

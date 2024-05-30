@@ -80,6 +80,13 @@ ja:
       title: パスワードリセット申請
     edit:
       title: パスワードリセット
+  admin:
+    user_sessions:
+      new:
+        title: ログイン
+    dashboards:
+      index:
+        title: ダッシュボード
   header:
     login: ログイン
     logout: ログアウト
