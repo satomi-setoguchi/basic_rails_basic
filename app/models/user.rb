@@ -31,5 +31,5 @@ class User < ApplicationRecord
     bookmark_boards.include?(board)
   end
 
-  enum role: { general: false, admin: true } 
+  enum role: { general: false, admin: true }
 end
