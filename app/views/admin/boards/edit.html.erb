@@ -1,0 +1,25 @@
+<% content_for(:title, @board.title, admin: true) %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+      <h1><%= t '.title' %></h1>
+      <%= form_with model: @board, url: admin_board_path(@board), local: true do |form| %>
+        <%= render 'shared/error_message', object: form.object %>
+        <div class="mb-3">
+          <%= form.label :title %>
+          <%= form.text_field :title, class: "form-control" %>
+        </div>
+        <div class="mb-3">
+          <%= form.label :body %>
+          <%= form.text_area :body, class: "form-control",rows: "10" %>
+        </div>
+        <div class="mb-3">
+          <%= form.label :board_image %>
+          <%= form.file_field :board_image, class: "form-control", accept: 'image/*' %>
+          <%= form.hidden_field :board_image_cache %>
+        </div>
+        <%= form.submit nil,  class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>

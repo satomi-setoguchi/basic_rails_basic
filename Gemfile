@@ -88,3 +88,5 @@ gem 'bootstrap5-kaminari-views'
 gem 'ransack', '3.2.1'
 
 gem 'config'
+
+gem 'enum_help'
