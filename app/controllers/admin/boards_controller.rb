@@ -23,12 +23,12 @@ class Admin::BoardsController < Admin::BaseController
   end
 
   def destroy
-    @board= Board.find(params[:id])
+    @board = Board.find(params[:id])
     @board.destroy!
     redirect_to admin_boards_path, status: :see_other, success: t('defaults.flash_message.deleted', item: Board.model_name.human)
   end
 
-    private
+  private
 
   def board_params
     params.require(:board).permit(:title, :body)

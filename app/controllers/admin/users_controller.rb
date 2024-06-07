@@ -1,5 +1,4 @@
 class Admin::UsersController < Admin::BaseController
-
   def index
     @q = User.ransack(params[:q])
     @users = @q.result.order(created_at: :desc).page(params[:page])
@@ -29,7 +28,7 @@ class Admin::UsersController < Admin::BaseController
     redirect_to admin_users_path, status: :see_other, success: t('defaults.flash_message.deleted', item: User.model_name.human)
   end
 
-    private
+  private
 
   def user_params
     params.require(:user).permit(:email, :role, :last_name, :first_name, :avatar)
